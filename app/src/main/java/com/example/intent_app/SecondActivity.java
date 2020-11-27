@@ -13,5 +13,9 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         Intent intent = getIntent();
+        String lessonName = "";
+        intent.putExtra("lessonName", lessonName);
+        setResult(RESULT_OK, intent);
+        finish();
     }
 }
