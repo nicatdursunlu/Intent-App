@@ -5,13 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SecondActivity"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
     <EditText
+        android:id="@+id/lesson_name_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:hint="@string/type_lesson_name"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/lesson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
 
 </LinearLayout>
