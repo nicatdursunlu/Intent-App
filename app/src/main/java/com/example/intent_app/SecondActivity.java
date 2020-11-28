@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -14,17 +16,18 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+    }
 
-        EditText lesson = findViewById(R.id.lesson_name_input);
-        String fenn = lesson.getText().toString();
+    public void closeButton(View view) {
+        EditText lessonInput = findViewById(R.id.lesson_name_input);
+        String lessonName = lessonInput.getText().toString();
         TextView tv = findViewById(R.id.lesson);
-        tv.setText(fenn);
+        tv.setText(lessonName);
+        Toast.makeText(this, "You write " + lessonName, Toast.LENGTH_LONG).show();
 
-
-        Intent intent = getIntent();
-        String lessonName = "";
+        Intent intent = new Intent();
         intent.putExtra("lessonName", lessonName);
         setResult(RESULT_OK, intent);
-//        finish();
+        finish();
     }
 }
