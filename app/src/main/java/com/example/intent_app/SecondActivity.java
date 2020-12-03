@@ -20,8 +20,6 @@ public class SecondActivity extends AppCompatActivity {
     public void closeButton(View view) {
         EditText lessonInput = findViewById(R.id.lesson_name_input);
         String lessonName = lessonInput.getText().toString();
-        TextView tv = findViewById(R.id.lesson);
-        tv.setText(lessonName);
 
         Intent intent = new Intent();
         intent.putExtra("lessonName", lessonName);
