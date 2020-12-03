@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -23,7 +22,6 @@ public class SecondActivity extends AppCompatActivity {
         String lessonName = lessonInput.getText().toString();
         TextView tv = findViewById(R.id.lesson);
         tv.setText(lessonName);
-        Toast.makeText(this, "You write " + lessonName, Toast.LENGTH_LONG).show();
 
         Intent intent = new Intent();
         intent.putExtra("lessonName", lessonName);
